@@ -8,8 +8,10 @@
     </head>
     <body>
         <h1>Liste des étudiants</h1>
-        <c:forEach items="${listeEtudiants}" var="etudiant">
-            <c:out value="${etudiant.toString()}"/><br/>
-        </c:forEach>
+        <ol>
+            <c:forEach items="${listeEtudiants}" var="etudiant">
+                <li> <c:out value="${etudiant.toString()}"/><br/></li>
+            </c:forEach>
+        </ol>
     </body>
 </html>
