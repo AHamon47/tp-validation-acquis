@@ -5,13 +5,38 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Liste Etudiants</title>
+        <style>
+            table, td {
+                border: 1px solid #333;
+            }
+
+            thead, tfoot {
+                background-color: #333;
+                color: #fff;
+            }
+         </style>
     </head>
     <body>
-        <h1>Liste des étudiants</h1>
-        <ol>
-            <c:forEach items="${listeEtudiants}" var="etudiant">
-                <li> <c:out value="${etudiant.toString()}"/><br/></li>
-            </c:forEach>
-        </ol>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">Liste des étudiants</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nom</td>
+                    <td>ID</td>
+                    <td>Moyenne</td>
+                </tr>
+                <c:forEach items="${listeEtudiants}" var="etudiant">
+                    <tr>
+                        <td><c:out value="${etudiant.getNom()}"/></td>
+                        <td><c:out value="${etudiant.getId()}"/></td>
+                        <td><c:out value="${etudiant.getMoyenne()}"/></td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
     </body>
 </html>
