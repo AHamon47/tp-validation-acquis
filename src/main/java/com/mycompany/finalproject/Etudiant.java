@@ -4,11 +4,13 @@ public class Etudiant {
     private String id;
     private String nom;
     private double moyenne;
+    private String image;
     
-    public Etudiant(String idP, String nomP, double moyP) {
+    public Etudiant(String idP, String nomP, double moyP, String imageP) {
         this.id = idP;
         this.nom = nomP;
         this.moyenne = moyP;
+        this.image = imageP;
     }
     
     public void setId(String idP) {
@@ -21,6 +23,14 @@ public class Etudiant {
     
     public void setMoyenne(double moyP) {
         this.moyenne = moyP;
+    }
+    
+    public void setImage(String imgP) {
+        this.image = imgP;
+    }
+    
+    public String getImage() {
+        return this.image;
     }
     
     public String getId() {
