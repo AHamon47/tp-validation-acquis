@@ -43,6 +43,16 @@
                 font-family: verdana;
                 font-size: 300%;
             }
+            button {
+                background-color: #089c7c;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+              }
          </style>
     </head>
     <body>
@@ -56,7 +66,6 @@
                         <th>Moyenne</th>
                         <th>Photo</th>
                     </tr>
-
                 </thead>
                 <tbody>
                     <c:forEach items="${listeEtudiants}" var="etudiant">
@@ -69,6 +78,10 @@
                     </c:forEach>
                 </tbody>
             </table>
+            <form action="affichage-etudiants" method="POST">
+                <button type="submit" name="order" value="asc"/>Croissant</button>
+                <button type="submit" name="order" value="desc">Décroissant</button>
+            </form>
         </div>
     </body>
 </html>

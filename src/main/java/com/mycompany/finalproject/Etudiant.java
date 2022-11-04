@@ -1,6 +1,6 @@
 package com.mycompany.finalproject;
 
-public class Etudiant {
+public class Etudiant implements Comparable<Etudiant> {
     private String id;
     private String nom;
     private double moyenne;
@@ -51,5 +51,11 @@ public class Etudiant {
     
     public String toString() {
         return "Nom: "+this.nom+", ID: "+this.id+", Moyenne: "+this.moyenne;
+    }
+
+    @Override
+    public int compareTo(Etudiant e) {
+        int compareMoy = (int)e.getMoyenne();
+        return (int)this.getMoyenne() - compareMoy;
     }
 }
