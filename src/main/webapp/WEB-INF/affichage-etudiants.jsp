@@ -25,14 +25,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Nom</td>
                     <td>ID</td>
+                    <td>Nom</td>
                     <td>Moyenne</td>
                 </tr>
                 <c:forEach items="${listeEtudiants}" var="etudiant">
                     <tr>
-                        <td><c:out value="${etudiant.getNom()}"/></td>
                         <td><c:out value="${etudiant.getId()}"/></td>
+                        <td><c:out value="${etudiant.getNom()}"/></td>
                         <td><c:out value="${etudiant.getMoyenne()}"/></td>
                     </tr>
                 </c:forEach>
