@@ -73,7 +73,7 @@
                             <td><c:out value="${etudiant.getId()}"/></td>
                             <td><c:out value="${etudiant.getNom()}"/></td>
                             <td><c:out value="${etudiant.getMoyenne()}"/></td>
-                            <td><img class="etudiant-picture" src="./images/${etudiant.getImage()}" alt="${etudiant.getImage()}"/>
+                            <td><img class="etudiant-picture" src="./images/${etudiant.getImage()}" alt="${etudiant.getImage()}"/></td>
                         </tr>
                     </c:forEach>
                 </tbody>

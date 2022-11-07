@@ -19,9 +19,6 @@ public class AffichageEtudiants extends HttpServlet {
         if(sort==null) {
             sort="";
         }
-        if(GestionEtudiants.getListeEtudiants() == null) {
-            GestionEtudiants.initiateList();   
-        }
         if(sort.equals("asc")) {
             Collections.sort(GestionEtudiants.getListeEtudiants());
         }
@@ -35,7 +32,7 @@ public class AffichageEtudiants extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
     { 
-        String sort = (String)request.getSession().getAttribute("order");
+        String sort = (String)request.getParameter("order");
         request.getSession().setAttribute("order", sort);
         doGet(request, response);
     }

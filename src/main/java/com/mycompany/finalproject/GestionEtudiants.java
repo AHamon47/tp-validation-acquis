@@ -2,11 +2,10 @@ package com.mycompany.finalproject;
 
 import java.util.ArrayList;
 
-
 public class GestionEtudiants {
-    public static ArrayList<Etudiant> listeEtudiants;
+    private static ArrayList<Etudiant> listeEtudiants;
     
-    public static void initiateList() {
+    private static void initiateList() {
         listeEtudiants = new ArrayList();
         listeEtudiants.add(new Etudiant("1", "Etudiant1", 12.0, "img1.jpg"));
         listeEtudiants.add(new Etudiant("2", "Etudiant2", 14.0, "img2.jpg"));
@@ -16,6 +15,9 @@ public class GestionEtudiants {
     }
     
     public static ArrayList<Etudiant> getListeEtudiants() {
+        if(listeEtudiants == null) {
+            initiateList();
+        }
         return listeEtudiants;
     }
 }
